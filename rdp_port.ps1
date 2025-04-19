@@ -1,15 +1,3 @@
-#Requires -RunAsAdministrator
-<#
-.SYNOPSIS
-自动修改RDP端口并配置防火墙规则
-
-.DESCRIPTION
-1. 生成非默认(3389)的随机端口
-2. 修改注册表设置
-3. 更新防火墙规则
-4. 显示最终配置
-#>
-
 # 生成有效随机端口（排除默认3389）
 do {
     $portvalue = Get-Random -Minimum 49152 -Maximum 65535
